@@ -1,0 +1,28 @@
+﻿<Window x:Class="MiniGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiniGame"
+        mc:Ignorable="d"
+        Title="KillerBitch" SizeToContent="WidthAndHeight" ContentRendered="Window_ContentRendered">
+    <Grid>
+        <Grid Margin="40">
+            <Border BorderThickness="5" BorderBrush="Black">
+                <Canvas x:Name="gameField" ClipToBounds="True" Width="700" Height="400" VerticalAlignment="Top">
+                    <Grid Height="auto" Width="auto">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        
+
+                    </Grid>
+                </Canvas>
+            </Border>
+        </Grid>
+        <Button Focusable="False" Content="Add enemy" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Label x:Name="playerScore" Content="Player score: 0" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Button Focusable="False" Content="Reset Game" HorizontalAlignment="Left" Margin="445,10,0,0" VerticalAlignment="Top" Click="Reset_Game"/>
+        <Button Focusable="False" Content="New Game" HorizontalAlignment="Left" Margin="532,10,0,0" VerticalAlignment="Top" Click="New_Game"/>
+    </Grid>
+</Window>
